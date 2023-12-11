@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FoodType } from '../types';
 import './FoodCards.css';

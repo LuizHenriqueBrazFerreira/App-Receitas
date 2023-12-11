@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import emptyHeart from '../images/whiteHeartIcon.svg';
 import handleFavoriteRecipe from '../utils/favoriteRecipes';
-import { FormattedRecipeFavorite, FormattedRecipeInProgress } from '../types';
+import { FormattedRecipeFavorite } from '../types';
 import fullHeart from '../images/blackHeartIcon.svg';
 
 type ButtonProps = {

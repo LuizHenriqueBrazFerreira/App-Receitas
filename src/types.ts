@@ -24,7 +24,7 @@ export type FormattedRecipeInProgress = {
   type: 'meal' | 'drink';
   tags:[]
   nationality: string
-  doneDate: any;
+  doneDate: string;
 };
 
 export type FormattedRecipeFavorite = {
@@ -32,7 +32,7 @@ export type FormattedRecipeFavorite = {
   image: string;
   id: string;
   instructions: string;
-  category?: string
+  category: string
   alcoholicOrNot: string
   ingredients: {
     ingredient: string
@@ -40,9 +40,9 @@ export type FormattedRecipeFavorite = {
   }[];
   measures: string[];
   type: 'meal' | 'drink' // mesma coisa aqui
-  tags?:[]
+  tags:[]
   nationality: string
-  doneDate: any;
+  doneDate: string;
   youtube:string
 };
 
