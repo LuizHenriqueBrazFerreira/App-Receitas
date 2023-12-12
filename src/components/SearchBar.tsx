@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { fetchRecipes } from '../services/api';
+import './SearchBar.css';
 
 const INITIAL_STATE = {
   searchInput: '',
@@ -27,13 +28,11 @@ function SearchBar() {
       setSearch(INITIAL_STATE);
       return;
     }
-    // console.log('currentRoute = ', currentRoute);
-    // console.log(searchInput, currentRoute, filter);
+
     const data = await fetchRecipes(searchInput, currentRoute, filter);
-    // console.log('data = ', data);
+
     const { meals, drinks } = data;
     if ((!meals && currentRoute === 'meals') || (!drinks && currentRoute === 'drinks')) {
-      // console.log('entrou no if');
       alert("Sorry, we haven't found any recipes for these filters");
 
       setSearch(INITIAL_STATE);
@@ -53,7 +52,7 @@ function SearchBar() {
   };
 
   return (
-    <div>
+    <div className="search-bar-container">
       <form onSubmit={ handleSubmit }>
         <input
           type="text"
@@ -63,7 +62,7 @@ function SearchBar() {
           value={ searchInput }
           onChange={ handleChange }
         />
-        <div>
+        <div className="options-container">
           <label htmlFor="ingredient-radio">
             <input
               type="radio"

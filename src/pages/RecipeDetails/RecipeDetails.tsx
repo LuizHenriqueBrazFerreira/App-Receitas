@@ -121,14 +121,14 @@ function RecipeDetails() {
           />
         </>
       )}
-      <h2>Even better with</h2>
+      <h2 className="carousel-title">Even better with</h2>
       <div
         className="carousel-container"
       >
         {recommendation.slice(0, 6).map((recommendation2: any, index2: number) => (
           <div
             key={ index2 }
-            style={ { flex: '0 0 auto', width: '200px', marginRight: '10px' } }
+            style={ { flex: '0 0 auto', width: '200px', margin: '0 10px' } }
           >
             <img
               data-testid={ `${index2}-recommendation-card` }

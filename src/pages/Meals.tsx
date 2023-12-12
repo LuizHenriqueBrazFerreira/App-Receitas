@@ -39,7 +39,6 @@ function Meals() {
     const removeUnusualKeys = removeEmptyOrNullKeys(
       filterMealsByCategory.meals,
     ) as FoodType[];
-    // console.log(removeUnusualKeys);
     setFilteredMeals(removeUnusualKeys);
     setCheck(search);
   };
@@ -50,10 +49,8 @@ function Meals() {
   };
 
   const apiSliced = mealsRecipe.slice(0, 12);
-  // console.log(apiSliced);
 
   const filterMealsSliced = filteredMeals.slice(0, 12);
-  // console.log(filterMealsSliced);
   return (
     <>
       <h2 className="categories-title">Categories</h2>

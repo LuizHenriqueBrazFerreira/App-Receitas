@@ -63,7 +63,6 @@ export default function RecipeInProgress() {
           setInProgressOnMount(formattedRecipe.id, recipeType, formattedRecipe);
         }
         setRecipeDetails(formattedRecipe);
-        // console.log(upDateInProgress(recipeDetails));
       } catch (error: any) {
         console.log('API endpoint not found');
       }
@@ -75,7 +74,6 @@ export default function RecipeInProgress() {
     const recipeId = `${id}`;
 
     const currentRecipeProgress = previousProgressLocalStorage[recipeType][recipeId];
-    // console.log(currentRecipeProgress);
 
     const updatedIngredients = currentRecipeProgress;
 
@@ -83,7 +81,6 @@ export default function RecipeInProgress() {
       ...updatedIngredients[index],
       isChecked: !updatedIngredients[index].isChecked,
     };
-    // console.log(updatedIngredients);
 
     // const newProgress = {
     //   ingredients: updatedIngredients,
@@ -180,7 +177,6 @@ export default function RecipeInProgress() {
         data-testid="finish-recipe-btn"
         onClick={ () => {
           handleDoneRecipe(recipeDetails);
-          // console.log(progress);
 
           navigate('/done-recipes');
         } }

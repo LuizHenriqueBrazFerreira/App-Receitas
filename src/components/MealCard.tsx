@@ -10,7 +10,6 @@ type MealCardProps = {
 function MealCard({ meal, index }: MealCardProps) {
   const { idMeal, strMeal, strMealThumb, strTags } = meal;
   const tag = strTags ? strTags.split(',') : strTags;
-  // console.log(tag);
 
   return (
     <Link

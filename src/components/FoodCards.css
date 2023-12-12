@@ -31,15 +31,17 @@
 
 .categories-title {
   border-top: 1px solid #643c23;
+  padding-top: 6px;
   text-align: center;
 }
 
 .categories-container {
+  align-content: space-around;
   border-bottom: 1px solid #643c23;
   display: flex;
   flex-flow: row wrap;
   height: 100px;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 100%;
 }
 

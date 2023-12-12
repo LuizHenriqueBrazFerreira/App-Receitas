@@ -39,7 +39,6 @@ export default function FavoriteRecipes() {
         }, 3000);
       });
   };
-  // comentando para poder salvar
 
   return (
     <>
